@@ -1,2 +1,2 @@
-body.dark{--color-scroll-bars: #222}*{margin:0;padding:0;border:0;box-sizing:border-box;overflow:scroll}body{scrollbar-width:thin;scrollbar-color:var(--color-scroll-bars) var(--scrollbarBG)}
+html{--scrollbarBG: #00ccff;--thumbBG: #222}*{margin:0;padding:0;border:0;box-sizing:border-box;overflow:hidden}body{scrollbar-width:thin;scrollbar-color:var(--thumbBG) var(--scrollbarBG)}html{background:lightgrey}body{width:100%;height:100vh;overflow:scroll}
 /*# sourceMappingURL=main.min.css.map */
