@@ -1,5 +1,6 @@
-@import "ColorsDark";
-@import "ColorsLight";
+@import "colorsDark";
+@import "colorsLight";
+@import "navidad";
 
 * {
 	margin: 0;
@@ -30,4 +31,49 @@ body {
 	height: 100vh;
 	overflow: auto;
 	background: var(--color-body-bg);
+	display: grid;
+	grid-template-rows: 50px auto 50px;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+}
+
+.header {
+	grid-area: header;
+	display: grid;
+	grid-template-columns: 50px 200px 50px auto 50px 50px 50px 50px;
+	grid-template-areas: "logo-img" "logo-text" "button-hamburger" "grid-space" "switch-audio" "swith-fullscreen" "switch-dark-light" "switch-lang";
+
+	.logo-img {
+		grid-area: logo-img;
+	}
+
+	.logo-text {
+		grid-area: logo-text;
+	}
+
+	.button-hamburger {
+		grid-area: button-hamburger;
+	}
+
+	.grid-space {
+		grid-area: grid-space;
+	}
+
+	.logo-img {
+		grid-area: logo-img;
+	}
+}
+
+.nav {
+	grid-area: main;
+}
+
+.main {
+	grid-area: main;
+}
+
+.footer {
+	grid-area: footer;
 }

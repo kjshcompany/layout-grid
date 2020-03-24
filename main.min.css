@@ -1,2 +1,85 @@
-body.dark{--color-scroll-bars-bg: #222;--color-scroll-bars-box: #777;--color-body-bg: #222}body.light{--color-scroll-bars-bg: #f1f1f1;--color-scroll-bars-box: #999;--color-body: #f1f1f1}*{margin:0;padding:0;border:0;box-sizing:border-box;overflow:hidden}body::-webkit-scrollbar{width:8px;height:8px}body::-webkit-scrollbar-track,body::-webkit-scrollbar-track-piece,body::-webkit-resizer,body::-webkit-scrollbar-corner{background:var(--color-scroll-bars-bg)}body::-webkit-scrollbar-thumb{background:var(--color-scroll-bars-box)}body{width:100%;height:100vh;overflow:auto;background:var(--color-body-bg)}
+body.dark {
+  --color-scroll-bars-bg: #222;
+  --color-scroll-bars-box: #777;
+  --color-body-bg: #222;
+}
+
+body.light {
+  --color-scroll-bars-bg: #f1f1f1;
+  --color-scroll-bars-box: #999;
+  --color-body-bg: #f1f1f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+body::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track-piece,
+body::-webkit-resizer,
+body::-webkit-scrollbar-corner {
+  background: var(--color-scroll-bars-bg);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--color-scroll-bars-box);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background: var(--color-body-bg);
+  display: grid;
+  grid-template-rows: 50px auto 50px;
+  grid-template-areas: "header" "main" "footer";
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 50px 200px 50px auto 50px 50px 50px 50px;
+  grid-template-areas: "logo-img" "logo-text" "button-hamburger" "grid-space" "switch-audio" "swith-fullscreen" "switch-dark-light" "switch-lang";
+}
+
+.header .logo-img {
+  grid-area: logo-img;
+}
+
+.header .logo-text {
+  grid-area: logo-text;
+}
+
+.header .button-hamburger {
+  grid-area: button-hamburger;
+}
+
+.header .grid-space {
+  grid-area: grid-space;
+}
+
+.header .logo-img {
+  grid-area: logo-img;
+}
+
+.nav {
+  grid-area: main;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
 /*# sourceMappingURL=main.min.css.map */
