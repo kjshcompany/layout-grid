@@ -1,11 +1,13 @@
-// .header {
-// 	body.navidad-on & {
-// 		--grid-template-columns: 50px 200px 50px auto 50px 50px 50px 50px;
-// 		--grid-template-areas-header: "logo-img" "logo-text" "button-hamburger" "grid-space" "switch-audio" "swith-fullscreen" "switch-dark-light" "switch-lang";
-// 	}
+.header {
+	--grid-template-columns-header: 50px 190px 50px auto 80px 80px 80px;
+	--grid-template-areas-header: "logo-img logo-text button-hamburger grid-space switch-full-screen switch-dark-light switch-lang";
 
-// 	body.navidad-off & {
-// 		--grid-template-columns-header: 50px 200px 50px auto 50px 50px 50px;
-// 		--grid-template-areas-header: "logo-img" "logo-text" "button-hamburger" "grid-space" "swith-fullscreen" "switch-dark-light" "switch-lang";
-// 	}
-// }
+	body.navidad & {
+		--grid-template-columns-header: 50px 190px 50px auto 80px 80px 80px 80px;
+		--grid-template-areas-header: "logo-img logo-text button-hamburger grid-space switch-audio switch-full-screen switch-dark-light switch-lang";
+
+		.switch-audio {
+			display: inline-block;
+		}
+	}
+}

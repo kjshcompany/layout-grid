@@ -1,0 +1,15 @@
+body {
+	--color-scroll-bars-bg: #f1f1f1;
+	--color-scroll-bars-box: #999;
+
+	--color-body-bg: #f1f1f1;
+	--color-body-txt: #333;
+
+	$.dark {
+		--color-scroll-bars-bg: #222;
+		--color-scroll-bars-box: #777;
+
+		--color-body-bg: #222;
+		--color-body-txt: #333;
+	}
+}

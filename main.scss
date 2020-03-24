@@ -28,22 +28,26 @@ body::-webkit-scrollbar-thumb {
 
 body {
 	width: 100%;
+	min-width: 800px;
 	height: 100vh;
 	overflow: auto;
 	background: var(--color-body-bg);
+	color: var(--color-body-txt);
 	display: grid;
+	grid-template-columns: 250px auto;
 	grid-template-rows: 50px auto 50px;
 	grid-template-areas:
-		"header"
-		"main"
-		"footer";
+		"header header"
+		"nav main"
+		"footer footer";
+	transition: all 0.3s ease;
 }
 
 .header {
 	grid-area: header;
 	display: grid;
-	grid-template-columns: 50px 200px 50px auto 50px 50px 50px 50px;
-	grid-template-areas: "logo-img" "logo-text" "button-hamburger" "grid-space" "switch-audio" "swith-fullscreen" "switch-dark-light" "switch-lang";
+	grid-template-columns: var(--grid-template-columns-header);
+	grid-template-areas: var(--grid-template-areas-header);
 
 	.logo-img {
 		grid-area: logo-img;
@@ -61,13 +65,26 @@ body {
 		grid-area: grid-space;
 	}
 
-	.logo-img {
-		grid-area: logo-img;
+	.switch-audio {
+		grid-area: switch-audio;
+		display: none;
+	}
+
+	.switch-full-screen {
+		grid-area: switch-full-screen;
+	}
+
+	.switch-dark-light {
+		grid-area: switch-dark-light;
+	}
+
+	.switch-lang {
+		grid-area: switch-lang;
 	}
 }
 
 .nav {
-	grid-area: main;
+	grid-area: nav;
 }
 
 .main {
