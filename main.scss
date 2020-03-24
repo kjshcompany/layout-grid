@@ -1,9 +1,5 @@
-//@import "_ColorsDark";
-
-html {
-	--scrollbarBG: #00ccff;
-	--thumbBG: #222;
-}
+@import "ColorsDark";
+@import "ColorsLight";
 
 * {
 	margin: 0;
@@ -13,25 +9,25 @@ html {
 	overflow: hidden;
 }
 
-// body::-webkit-scrollbar {
-// 	width: 11px;
-// }
 body {
 	scrollbar-width: thin;
-	scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+	scrollbar-color: var(--color-scroll-bars-bg) var(--color-scroll-bars-box);
 }
-// body::-webkit-scrollbar-track {
-// 	background: var(--scrollbarBG);
-// }
-// body::-webkit-scrollbar-thumb {
-// 	background-color: var(--thumbBG);
-// 	border-radius: 6px;
-// 	border: 3px solid var(--scrollbarBG);
-// }
 
-html {
-	background: lightgrey;
+body::-webkit-scrollbar {
+	width: 7px;
+	height: 7px;
 }
+
+body::-webkit-scrollbar-track,
+body::-webkit-resizer {
+	background: var(--color-scroll-bars-bg);
+}
+
+body::-webkit-scrollbar-thumb {
+	background: var(--color-scroll-bars-box);
+}
+
 body {
 	width: 100%;
 	height: 100vh;
