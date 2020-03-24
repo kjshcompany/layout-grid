@@ -1,2 +1,2 @@
-*{margin:0;padding:0;border:0}
+body.dark{--color-scroll-bars: #222}*{margin:0;padding:0;border:0;box-sizing:border-box;overflow:scroll}body{scrollbar-width:thin;scrollbar-color:var(--color-scroll-bars) var(--scrollbarBG)}
 /*# sourceMappingURL=main.min.css.map */

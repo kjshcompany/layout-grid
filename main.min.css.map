@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,CAAC,AAAC,CACD,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CACV,MAAM,CAAE,CAAC,CACT",
+    "mappings": "ACAA,AAAA,IAAI,AAAA,KAAK,AAAC,CACT,mBAAmB,CAAA,KAAC,CACpB,ADAD,AAAA,CAAC,AAAC,CACD,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CACV,MAAM,CAAE,CAAC,CACT,UAAU,CAAE,UAAU,CACtB,QAAQ,CAAE,MAAM,CAChB,AAED,AAAA,IAAI,AAAC,CACJ,eAAe,CAAE,IAAI,CACrB,eAAe,CAAE,wBAAwB,CAAC,kBAAkB,CAC5D",
     "sources": [
-        "main.scss"
+        "main.scss",
+        "_ColorsDark.scss"
     ],
     "names": [],
     "file": "main.min.css"
