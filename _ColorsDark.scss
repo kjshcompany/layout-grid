@@ -1,6 +1,8 @@
 body {
 	&.dark {
-		--color-scroll-bars-bg: #111;
-		--color-scroll-bars-box: #333;
+		--color-scroll-bars-bg: #222;
+		--color-scroll-bars-box: #777;
+
+		--color-body-bg: #222;
 	}
 }
