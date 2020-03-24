@@ -5,7 +5,7 @@ body {
 	--color-body-bg: #f1f1f1;
 	--color-body-txt: #333;
 
-	$.dark {
+	&.dark {
 		--color-scroll-bars-bg: #222;
 		--color-scroll-bars-box: #777;
 
