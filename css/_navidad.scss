@@ -2,9 +2,37 @@
 	--grid-template-columns-header: 50px 190px 50px auto 80px 80px 80px;
 	--grid-template-areas-header: "logo-img logo-text button-hamburger grid-space switch-full-screen switch-dark-light switch-lang";
 
+	.logo-img {
+		--logo-img: url("../img/logo.png");
+
+		&:hover {
+			--logo-img-hover: url("../img/logo-hover.png");
+		}
+
+		&:focus {
+			--logo-img-focus: url("../img/logo-hover.png");
+		}
+	}
+
+	.switch-audio {
+		display: none;
+	}
+
 	body.navidad & {
 		--grid-template-columns-header: 50px 190px 50px auto 80px 80px 80px 80px;
 		--grid-template-areas-header: "logo-img logo-text button-hamburger grid-space switch-audio switch-full-screen switch-dark-light switch-lang";
+
+		.logo-img {
+			--logo-img: url("../img/logo-navidad.png");
+
+			&:hover {
+				--logo-img-hover: url("../img/logo-navidad-hover.png");
+			}
+
+			&:focus {
+				--logo-img-focus: url("../img/logo-navidad-hover.png");
+			}
+		}
 
 		.switch-audio {
 			display: inline-block;
