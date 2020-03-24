@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="css/main.min.css" />
 		<script src="js/main.js"></script>
 	</head>
-	<body class="dark navidad">
+	<body class="navidad">
 		<header class="header">
 			<a href="" class="logo-img"></a>
 			<a href="" class="logo-text">LOGO TEXT</a>
@@ -17,9 +17,34 @@
 			<button class="switch-audio"></button>
 			<button class="switch-full-screen"></button>
 			<button class="switch-dark-light"></button>
-			<button class="switch-lang"></button>
+			<form id="switch-lang" method="post" action="">
+				<input type="hidden" name="select_lang" value="" />
+				<button type="submit" class="switch-lang"></button>
+			</form>
 		</header>
-		<nav class="nav">NAV</nav>
+		<nav class="nav">
+			<a href="" class="active">
+				<i class="fas fa-home"></i>
+				HOME
+			</a>
+			<a href="" class="sub">
+				<i class="fas fa-folder"></i>
+				MENU
+				<i class="fas fa-sort-down"></i>
+			</a>
+			<a href="">
+				<i class="fas fa-concierge-bell"></i>
+				SERVICES
+			</a>
+			<a href="">
+				<i class="fas fa-envelope"></i>
+				CONTACT
+			</a>
+			<a href="">
+				<i class="fas fa-address-card"></i>
+				ABOUT
+			</a>
+		</nav>
 		<main class="main">MAIN</main>
 		<footer class="footer">FOOTER</footer>
 	</body>

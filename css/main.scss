@@ -235,9 +235,13 @@ body {
 		}
 	}
 
+	#switch-lang {
+		position: relative;
+		top: 2px;
+	}
+
 	.switch-lang {
 		grid-area: switch-lang;
-		position: relative;
 		background: var(--color-switch-bg);
 		width: 60px;
 		height: 30px;
@@ -245,11 +249,13 @@ body {
 		cursor: pointer;
 
 		&::after {
+			content: "";
 			position: absolute;
 			top: 0;
 			left: 0;
 			right: unset;
 			background: var(--color-switch-box) var(--img-en) center center no-repeat;
+			background-size: 24px 24px;
 			width: 30px;
 			height: 30px;
 			border-radius: 4px;
@@ -269,6 +275,37 @@ body {
 	grid-area: nav;
 	background: var(--color-box-bg);
 	color: var(--color-box-txt);
+	padding-left: 5px;
+
+	a {
+		display: block;
+		padding: 15px 0px;
+		color: var(--color-link-box-txt);
+		min-width: 800px;
+		transition: all 0.3s ease;
+
+		&.active {
+			background: var(--color-link-bg-box-hover);
+			color: var(--color-link-box-txt-hover);
+			transition: all 0.3s ease;
+		}
+
+		&:hover {
+			background: var(--color-link-bg-box-hover);
+			color: var(--color-link-box-txt-hover);
+			transition: all 0.3s ease;
+		}
+
+		&:focus {
+			background: var(--color-link-bg-box-focus);
+			color: var(--color-link-box-txt-focus);
+			transition: all 0.3s ease;
+		}
+
+		.fas {
+			font-size: 1.5rem;
+		}
+	}
 }
 
 .main {

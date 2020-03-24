@@ -11,8 +11,10 @@ body {
 	--color-link-box-txt: #555;
 	--color-link-box-txt-hover: #777;
 	--color-link-box-txt-focus: #777;
+	--color-link-bg-box-hover: #f1f1f1;
+	--color-link-bg-box-focus: #f1f1f1;
 
-	--color-switch-bg: #222;
+	--color-switch-bg: #555;
 	--color-switch-box: #777;
 	--color-switch-txt: #f1f1f1;
 
@@ -29,6 +31,8 @@ body {
 		--color-link-box-txt: #d4d4d4;
 		--color-link-box-txt-hover: #adadad;
 		--color-link-box-txt-focus: #adadad;
+		--color-link-bg-box-hover: #222;
+		--color-link-bg-box-focus: #222;
 
 		--color-switch-bg: #222;
 		--color-switch-box: #777;
