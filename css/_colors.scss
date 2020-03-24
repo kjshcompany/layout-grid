@@ -12,6 +12,10 @@ body {
 	--color-link-box-txt-hover: #777;
 	--color-link-box-txt-focus: #777;
 
+	--color-switch-bg: #222;
+	--color-switch-box: #777;
+	--color-switch-txt: #f1f1f1;
+
 	&.dark {
 		--color-scroll-bars-bg: #222;
 		--color-scroll-bars-box: #777;
@@ -25,5 +29,9 @@ body {
 		--color-link-box-txt: #d4d4d4;
 		--color-link-box-txt-hover: #adadad;
 		--color-link-box-txt-focus: #adadad;
+
+		--color-switch-bg: #222;
+		--color-switch-box: #777;
+		--color-switch-txt: #f1f1f1;
 	}
 }

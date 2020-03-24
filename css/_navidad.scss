@@ -1,5 +1,5 @@
 .header {
-	--grid-template-columns-header: 50px 190px 50px auto 80px 80px 80px;
+	--grid-template-columns-header: 50px 200px 50px auto 80px 80px 80px;
 	--grid-template-areas-header: "logo-img logo-text button-hamburger grid-space switch-full-screen switch-dark-light switch-lang";
 
 	.logo-img {
@@ -19,7 +19,7 @@
 	}
 
 	body.navidad & {
-		--grid-template-columns-header: 50px 190px 50px auto 80px 80px 80px 80px;
+		--grid-template-columns-header: 50px 200px 50px auto 80px 80px 80px 80px;
 		--grid-template-areas-header: "logo-img logo-text button-hamburger grid-space switch-audio switch-full-screen switch-dark-light switch-lang";
 
 		.logo-img {

@@ -1,3 +1,4 @@
+@import "basic";
 @import "colors";
 @import "navidad";
 
@@ -87,6 +88,7 @@ body {
 	.logo-text {
 		grid-area: logo-text;
 		justify-self: start;
+		padding-left: 10px;
 		color: var(--color-link-box-txt);
 		font-size: 1.2rem;
 		cursor: pointer;
@@ -133,18 +135,133 @@ body {
 
 	.switch-audio {
 		grid-area: switch-audio;
+		position: relative;
+		background: var(--color-switch-bg);
+		width: 60px;
+		height: 30px;
+		border-radius: 4px;
+		cursor: pointer;
+
+		&::after {
+			font-family: "Font Awesome\ 5 Free";
+			content: "\f028";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: unset;
+			background: var(--color-switch-box);
+			color: var(--color-switch-txt);
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			border-radius: 4px;
+		}
+
+		&.active {
+			&::after {
+				font-family: "Font Awesome\ 5 Free";
+				content: "\f6a9";
+				right: 0;
+				left: unset;
+			}
+		}
 	}
 
 	.switch-full-screen {
 		grid-area: switch-full-screen;
+		position: relative;
+		background: var(--color-switch-bg);
+		width: 60px;
+		height: 30px;
+		border-radius: 4px;
+		cursor: pointer;
+
+		&::after {
+			font-family: "Font Awesome\ 5 Free";
+			content: "\f065";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: unset;
+			background: var(--color-switch-box);
+			color: var(--color-switch-txt);
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			border-radius: 4px;
+		}
+
+		&.active {
+			&::after {
+				font-family: "Font Awesome\ 5 Free";
+				content: "\f066";
+				right: 0;
+				left: unset;
+			}
+		}
 	}
 
 	.switch-dark-light {
 		grid-area: switch-dark-light;
+		position: relative;
+		background: var(--color-switch-bg);
+		width: 60px;
+		height: 30px;
+		border-radius: 4px;
+		cursor: pointer;
+
+		&::after {
+			font-family: "Font Awesome\ 5 Free";
+			content: "\f185";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: unset;
+			background: var(--color-switch-box);
+			color: var(--color-switch-txt);
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			border-radius: 4px;
+		}
+
+		&.active {
+			&::after {
+				font-family: "Font Awesome\ 5 Free";
+				content: "\f186";
+				right: 0;
+				left: unset;
+			}
+		}
 	}
 
 	.switch-lang {
 		grid-area: switch-lang;
+		position: relative;
+		background: var(--color-switch-bg);
+		width: 60px;
+		height: 30px;
+		border-radius: 4px;
+		cursor: pointer;
+
+		&::after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: unset;
+			background: var(--color-switch-box) var(--img-en) center center no-repeat;
+			width: 30px;
+			height: 30px;
+			border-radius: 4px;
+		}
+
+		&.active {
+			&::after {
+				right: 0;
+				left: unset;
+				background: var(--color-switch-box) var(--img-es) center center no-repeat;
+			}
+		}
 	}
 }
 
