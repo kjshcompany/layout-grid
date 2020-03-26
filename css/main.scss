@@ -305,6 +305,28 @@ body {
 		.fas {
 			font-size: 1.5rem;
 		}
+
+		&.sub {
+			a {
+				display: none;
+			}
+
+			/*
+			.sub-up {
+				display: none;
+			}
+			.sub-down {
+				display: none;
+			}
+
+			.sub-up {
+				display: inline-block;
+			}
+
+			.sub-nav {
+				display: inline-block;
+			}*/
+		}
 	}
 }
 
