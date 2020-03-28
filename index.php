@@ -72,7 +72,9 @@
 				ABOUT
 			</a>
 		</nav>
-		<main class="main">MAIN</main>
+		<main class="main">
+			<span id="status">Main</span>
+			</main>
 		<footer class="footer">FOOTER</footer>
 	</body>
 </html>
