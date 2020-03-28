@@ -30,17 +30,28 @@ $(document).ready(function() {
 
 	$(".switch-lang").on("click", function(e) {
 		e.preventDefault();
-		alert(lang);
-		if (getCookie("lang") === "") {
-			setCookie("lang", $("#select_lang").val(), 365);
-			$("html").attr("lang", $("#select_lang").val());
-			$("#select_lang").attr("value", "es");
-		} else if (getCookie("lang") === "en") {
-			setCookie("lang", $("#select_lang").val(), 365);
-			$("html").attr("lang", $("#select_lang").val());
-			$("#select_lang").attr("value", "es");
-		} else {
-		}
+		console.log("default lang: ", default_lang);
+		setCookie("lang", $("#select_lang").val(), 365);
+		$("#select_lang").attr("value", default_lang);
+		default_lang = getCookie("lang");
+		console.log("modify lang: ", default_lang);
+		$("html").attr("lang", default_lang);
+		let modify_lang = default_lang;
+		//$("html").attr("lang", default_lang);
+		//if (getCookie("lang") === "") {
+		//} else if (getCookie("lang") === "es") {
+		// 	setCookie("lang", $("#select_lang").val(), 365);
+		// 	$("#select_lang").attr("value", default_lang);
+		// 	let default_lang = getCookie("lang");
+		// 	alert(default_lang);
+		// } else {
+		// }
+		//  else if (getCookie("lang") === "en") {
+		// 	setCookie("lang", $("#select_lang").val(), 365);
+		// 	$("html").attr("lang", $("#select_lang").val());
+		// 	$("#select_lang").attr("value", "es");
+		// } else {
+		// }
 		// $(".switch-lang").toggleClass("active");
 		// if ($(".switch-lang").hasClass("active")) {
 		// 	setCookie("lang", $("#select_lang").val(), 365);

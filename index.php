@@ -28,7 +28,7 @@
 		<link rel="stylesheet" href="css/main.min.css" />
 		<script src="js/jquery.min.js"></script>
 		<script>
-			var lang = <?= Config::get('default_lang') ?>;
+			let default_lang = "<?= Config::get('default_lang') ?>";
 		</script>
 		<script src="js/main.js"></script>
 	</head>
