@@ -19,7 +19,7 @@
 	Lang::load(Config::get('default_lang'));
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="<?= Config::get('default_lang') ?>">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,6 +27,9 @@
 		<link rel="stylesheet" href="css/all.min.css" />
 		<link rel="stylesheet" href="css/main.min.css" />
 		<script src="js/jquery.min.js"></script>
+		<script>
+			var lang = <?= Config::get('default_lang') ?>;
+		</script>
 		<script src="js/main.js"></script>
 	</head>
 	<body class="">
@@ -39,7 +42,7 @@
 			<button class="switch-full-screen"></button>
 			<button class="switch-dark-light"></button>
 			<!-- <form id="switch-lang" method="post" action=""> -->
-				<!-- <input type="hidden" name="select_lang" value="<?= (Config::get('default_lang') == 'es') ? 'en' : 'es' ?>" /> -->
+				<input type="hidden" id="select_lang" value="<?= (Config::get('default_lang') == 'es') ? 'en' : 'es' ?>" />
 				<button class="switch-lang"></button>
 			<!-- </form> -->
 		</header>
