@@ -50,6 +50,7 @@ body {
 		"header header"
 		"nav main"
 		"footer footer";
+	transition: all 0.3s ease;
 }
 
 .header {
@@ -74,11 +75,13 @@ body {
 		&:hover {
 			background: var(--logo-img-hover) no-repeat;
 			background-size: 50px 50px;
+			transition: all 0.3s ease;
 		}
 
 		&:focus {
 			background: var(--logo-img-focus) no-repeat;
 			background-size: 50px 50px;
+			transition: all 0.3s ease;
 		}
 	}
 
@@ -89,13 +92,16 @@ body {
 		color: var(--color-link-box-txt);
 		font-size: 1.2rem;
 		cursor: pointer;
+		transition: all 0.3s ease;
 
 		&:hover {
 			color: var(--color-link-box-txt-hover);
+			transition: all 0.3s ease;
 		}
 
 		&:focus {
 			color: var(--color-link-box-txt-focus);
+			transition: all 0.3s ease;
 		}
 	}
 
@@ -105,6 +111,7 @@ body {
 		background: none;
 		color: var(--color-link-box-txt);
 		cursor: pointer;
+		transition: all 0.3s ease;
 
 		&:before {
 			font-family: "Font Awesome\ 5 Free";
@@ -113,10 +120,12 @@ body {
 
 		&:hover {
 			color: var(--color-link-box-txt-hover);
+			transition: all 0.3s ease;
 		}
 
 		&:focus {
 			color: var(--color-link-box-txt-focus);
+			transition: all 0.3s ease;
 		}
 	}
 
@@ -130,7 +139,6 @@ body {
 		background: var(--color-switch-bg);
 		width: 60px;
 		height: 30px;
-		border-radius: 4px;
 		cursor: pointer;
 
 		&::after {
@@ -145,7 +153,6 @@ body {
 			width: 30px;
 			height: 30px;
 			line-height: 30px;
-			border-radius: 4px;
 		}
 
 		&.active {
@@ -164,7 +171,6 @@ body {
 		background: var(--color-switch-bg);
 		width: 60px;
 		height: 30px;
-		border-radius: 4px;
 		cursor: pointer;
 
 		&::after {
@@ -179,7 +185,6 @@ body {
 			width: 30px;
 			height: 30px;
 			line-height: 30px;
-			border-radius: 4px;
 		}
 
 		&.active {
@@ -198,7 +203,6 @@ body {
 		background: var(--color-switch-bg);
 		width: 60px;
 		height: 30px;
-		border-radius: 4px;
 		cursor: pointer;
 
 		&::after {
@@ -213,7 +217,6 @@ body {
 			width: 30px;
 			height: 30px;
 			line-height: 30px;
-			border-radius: 4px;
 		}
 
 		&.active {
@@ -237,27 +240,26 @@ body {
 		background: var(--color-switch-bg);
 		width: 60px;
 		height: 30px;
-		border-radius: 4px;
 		cursor: pointer;
 
 		&::after {
-			content: "";
+			content: var(--img-en);
 			position: absolute;
 			top: 0;
 			left: 0;
 			right: unset;
-			background: var(--color-switch-box) var(--img-en) center center no-repeat;
-			background-size: 24px 24px;
+			background: var(--color-switch-box);
 			width: 30px;
 			height: 30px;
-			border-radius: 4px;
+			line-height: 41px;
 		}
 
 		&.active {
 			&::after {
+				content: var(--img-es);
 				right: 0;
 				left: unset;
-				background: var(--color-switch-box) var(--img-es) center center no-repeat;
+				background: var(--color-switch-box);
 			}
 		}
 	}
@@ -274,20 +276,24 @@ body {
 		padding: 15px 0px;
 		color: var(--color-link-box-txt);
 		min-width: 800px;
+		transition: all 0.3s ease;
 
 		&.active {
 			background: var(--color-link-bg-box-hover);
 			color: var(--color-link-box-txt-hover);
+			transition: all 0.3s ease;
 		}
 
 		&:hover {
 			background: var(--color-link-bg-box-hover);
 			color: var(--color-link-box-txt-hover);
+			transition: all 0.3s ease;
 		}
 
 		&:focus {
 			background: var(--color-link-bg-box-focus);
 			color: var(--color-link-box-txt-focus);
+			transition: all 0.3s ease;
 		}
 
 		.fas {
