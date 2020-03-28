@@ -1,4 +1,16 @@
 $(document).ready(function() {
+	// $(".switch-lang").on("click", function(e) {
+	// 	e.preventDefault();
+	// 	$(".switch-lang").toggleClass("active");
+	// 	if ($(".switch-lang").hasClass("active")) {
+	// 		localStorage.setItem("lang-mode", "true");
+	// 	} else {
+	// 		localStorage.setItem("lang-mode", "false");
+	// 	}
+	// 	// setTimeout(function() {
+	// 	// 	$("#switch-lang").submit();
+	// 	// }, 1000);
+	// });
 	// $(".switch-lang").submit(function(e) {
 	// 	e.preventDefault();
 	// 	var url = $(this).attr("action");
@@ -8,11 +20,14 @@ $(document).ready(function() {
 	// 	// 	$("#status").text(response);
 	// 	// });
 	// });
-
-	$(document).on("submit", ".switch-lang", function(e) {
-		e.preventDefault();
-		$.post("./", $("#switch-lang").serialze(), function(data) {
-			$("#status").html(data);
-		});
-	});
+	// $(".switch-lang").on("click", function(e) {
+	// 	e.preventDefault();
+	// 	// $.ajax({
+	// 	// 	url: "./",
+	// 	// 	dataType: "html",
+	// 	// 	success: function(html) {
+	// 	// 		$("body").html(html);
+	// 	// 	}
+	// 	// });
+	// });
 });

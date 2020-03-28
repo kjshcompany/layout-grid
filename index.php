@@ -38,10 +38,10 @@
 			<button class="switch-audio"></button>
 			<button class="switch-full-screen"></button>
 			<button class="switch-dark-light"></button>
-			<form id="switch-lang" method="post" action="">
-				<input type="hidden" name="select_lang" value="<?= (Config::get('default_lang') == 'es') ? 'en' : 'es' ?>" />
-				<button type="submit" class="switch-lang"></button>
-			</form>
+			<!-- <form id="switch-lang" method="post" action=""> -->
+				<!-- <input type="hidden" name="select_lang" value="<?= (Config::get('default_lang') == 'es') ? 'en' : 'es' ?>" /> -->
+				<button class="switch-lang"></button>
+			<!-- </form> -->
 		</header>
 		<nav class="nav">
 			<a href="" class="active">
@@ -75,6 +75,6 @@
 		<main class="main">
 			<span id="status">Main</span>
 			</main>
-		<footer class="footer">FOOTER</footer>
+		<footer class="footer"><?= Lang::get('footer', 'version', 'Version') ?></footer>
 	</body>
 </html>
