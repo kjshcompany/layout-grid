@@ -1,3 +1,23 @@
+<?php
+	require_once 'Config.class.php';
+	require_once 'Functions.class.php';
+	require_once 'Lang.class.php';
+	require_once 'Session.class.php';
+	require_once 'Cookie.class.php';
+
+	Config::set('langs', [
+		'es',
+		'en',
+	]);
+
+	if (in_array(substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2), Config::get('langs'))) {
+		Config::set('default_lang', (Session::get('lang') ?? Cookie::get('lang') ?? substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2)));
+	} else {
+		Config::set('default_lang', (Session::get('lang') ?? Cookie::get('lang') ?? 'en'));
+	}
+
+	Lang::load(Config::get('default_lang'));
+?>
 <!DOCTYPE html>
 <html lang="es">
 	<head>
@@ -6,9 +26,10 @@
 		<title>Layoud Grid</title>
 		<link rel="stylesheet" href="css/all.min.css" />
 		<link rel="stylesheet" href="css/main.min.css" />
+		<script src="js/jquery.min.js"></script>
 		<script src="js/main.js"></script>
 	</head>
-	<body class="navidad">
+	<body class="">
 		<header class="header">
 			<a href="" class="logo-img"></a>
 			<a href="" class="logo-text">LOGO TEXT</a>
@@ -18,7 +39,7 @@
 			<button class="switch-full-screen"></button>
 			<button class="switch-dark-light"></button>
 			<form id="switch-lang" method="post" action="">
-				<input type="hidden" name="select_lang" value="" />
+				<input type="hidden" name="select_lang" value="<?= (Config::get('default_lang') == 'es') ? 'en' : 'es' ?>" />
 				<button type="submit" class="switch-lang"></button>
 			</form>
 		</header>
