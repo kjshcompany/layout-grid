@@ -23,32 +23,54 @@ $(document).ready(function() {
 	}
 
 	let lang = $("html").attr("lang");
-	if (lang === "es") {
-		localStorage.setItem("lang", false);
-		$("html").attr("lang", lang);
-		$(".switch-lang").removeClass("active");
+
+	if (!localStorage.getItem("lang") || !getCookie("lang")) {
+		if (lang === "es") {
+			$(".switch-lang").removeClass("active");
+			setCookie("lang", lang, 365);
+			localStorage.setItem("lang", lang);
+		} else if (lang === "en") {
+			$(".switch-lang").addClass("active");
+			setCookie("lang", lang, 365);
+			localStorage.setItem("lang", lang);
+		} else {
+			setCookie("lang", "", -365);
+			localStorage.removeItem("lang");
+			$("html").attr("lang", lang);
+			$(".switch-lang").hide();
+		}
 	} else {
-		localStorage.setItem("lang", true);
-		$("html").attr("lang", lang);
-		$(".switch-lang").addClass("active");
+		if (lang === "es") {
+			$(".switch-lang").removeClass("active");
+		} else if (lang === "en") {
+			$(".switch-lang").addClass("active");
+		} else {
+			setCookie("lang", "", -365);
+			localStorage.removeItem("lang");
+			$("html").attr("lang", lang);
+			$(".switch-lang").hide();
+		}
 	}
 
 	$(".switch-lang").on("click", function(e) {
 		e.preventDefault();
 		setCookie("lang", $(".switch-lang").attr("name"), 365);
-		if (lang === "es") {
-			localStorage.setItem("lang", true);
+		if (localStorage.getItem("lang") === "es") {
+			localStorage.setItem("lang", "en");
 			$("html").attr("lang", "en");
+			$(".switch-lang").attr("name", "es");
 			$(".switch-lang").addClass("active");
-		} else {
-			localStorage.setItem("lang", false);
+		} else if (localStorage.getItem("lang") === "en") {
+			localStorage.setItem("lang", "es");
 			$("html").attr("lang", "es");
+			$(".switch-lang").attr("name", "en");
 			$(".switch-lang").removeClass("active");
+		} else {
+			setCookie("lang", "", -365);
+			localStorage.removeItem("lang");
+			$("html").attr("lang", lang);
+			$(".switch-lang").hide();
 		}
-
-		// setCookie("lang", $(".switch-lang").attr("name"), 365);
-		// $("html").attr("lang", getCookie("lang"));
-		// $("html").attr("lang", getCookie("lang"));
 
 		$("body").load("./", function() {
 			console.clear();
