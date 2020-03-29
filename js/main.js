@@ -23,22 +23,16 @@ $(document).ready(function() {
 	}
 
 	if (localStorage.getItem("lang-mode") === "true") {
-		$(".switch-lang").addClass("active");
-	} else {
 		$(".switch-lang").removeClass("active");
+	} else {
+		$(".switch-lang").addClass("active");
 	}
-
 	$(".switch-lang").on("click", function(e) {
 		e.preventDefault();
-		// console.log("default lang: ", default_lang);
-		// setCookie("lang", $("#select_lang").val(), 365);
-		// $("#select_lang").attr("value", default_lang);
-		// default_lang = getCookie("lang");
-		// console.log("modify lang: ", default_lang);
 
 		setCookie("lang", $("#select_lang").val(), 365);
+		$("html").attr("lang", getCookie("lang"));
 
-		//$("html").attr("lang", default_lang);
 		if ($(".switch-lang").hasClass("active")) {
 			localStorage.setItem("lang-mode", "true");
 			$(".switch-lang").removeClass("active");
@@ -46,18 +40,10 @@ $(document).ready(function() {
 			$(".switch-lang").addClass("active");
 			localStorage.setItem("lang-mode", "false");
 		}
-		//$("body").load("./");
-		$("body")
-			.one("load", function() {
-				// do stuff
-			})
-			.each(function() {
-				if (this.complete) {
-					$(this).load(); // For jQuery < 3.0
-					// $(this).trigger('load'); // For jQuery >= 3.0
-				}
-			});
-		$("html").attr("lang", getCookie("lang"));
+
+		$("body").on("load", "./", function() {
+			console.clear();
+		});
 		//if (getCookie("lang") === "") {
 		//} else if (getCookie("lang") === "es") {
 		// 	setCookie("lang", $("#select_lang").val(), 365);
