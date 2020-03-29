@@ -30,7 +30,7 @@ $(document).ready(function() {
 	$(".switch-lang").on("click", function(e) {
 		e.preventDefault();
 
-		setCookie("lang", $("#select_lang").val(), 365);
+		setCookie("lang", $(".switch-lang").attr("name"), 365);
 		$("html").attr("lang", getCookie("lang"));
 
 		if ($(".switch-lang").hasClass("active")) {
@@ -41,54 +41,8 @@ $(document).ready(function() {
 			localStorage.setItem("lang-mode", "false");
 		}
 
-		$("body").on("load", "./", function() {
+		$("body").load("./", function() {
 			console.clear();
 		});
-		//if (getCookie("lang") === "") {
-		//} else if (getCookie("lang") === "es") {
-		// 	setCookie("lang", $("#select_lang").val(), 365);
-		// 	$("#select_lang").attr("value", default_lang);
-		// 	let default_lang = getCookie("lang");
-		// 	alert(default_lang);
-		// } else {
-		// }
-		//  else if (getCookie("lang") === "en") {
-		// 	setCookie("lang", $("#select_lang").val(), 365);
-		// 	$("html").attr("lang", $("#select_lang").val());
-		// 	$("#select_lang").attr("value", "es");
-		// } else {
-		// }
-		// $(".switch-lang").toggleClass("active");
-		// if ($(".switch-lang").hasClass("active")) {
-		// 	setCookie("lang", $("#select_lang").val(), 365);
-		// 	alert(getCookie("lang"));
-		// 	localStorage.setItem("lang-mode", "true");
-		// } else {
-		// 	setCookie("lang", $("#select_lang").val(), 365);
-		// 	alert(getCookie("lang"));
-		// 	localStorage.setItem("lang-mode", "false");
-		// }
-		// setTimeout(function() {
-		// 	$("#switch-lang").submit();
-		// }, 1000);
 	});
-	// $(".switch-lang").submit(function(e) {
-	// 	e.preventDefault();
-	// 	var url = $(this).attr("action");
-	// 	var data = $(this).serialize();
-	// 	$("body").load("./");
-	// 	// $("#status").load('url', data, function(response, status, request) {
-	// 	// 	$("#status").text(response);
-	// 	// });
-	// });
-	// $(".switch-lang").on("click", function(e) {
-	// 	e.preventDefault();
-	// 	// $.ajax({
-	// 	// 	url: "./",
-	// 	// 	dataType: "html",
-	// 	// 	success: function(html) {
-	// 	// 		$("body").html(html);
-	// 	// 	}
-	// 	// });
-	// });
 });
