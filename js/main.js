@@ -27,6 +27,7 @@ $(document).ready(function() {
 	} else {
 		$(".switch-lang").addClass("active");
 	}
+
 	$(".switch-lang").on("click", function(e) {
 		e.preventDefault();
 
