@@ -15,6 +15,7 @@
 	} else {
 		Config::set('default_lang', (Session::get('lang') ?? Cookie::get('lang') ?? 'en'));
 	}
+	Config::set('default_lang', "e");
 	Lang::load(Config::get('default_lang'));
 
 ?>
@@ -29,7 +30,7 @@
 		<script src="js/jquery.min.js"></script>
 		<script src="js/main.js"></script>
 	</head>
-	<body class="">
+	<body class="navidad">
 		<header class="header">
 			<a href="" class="logo-img"></a>
 			<a href="" class="logo-text">LOGO TEXT</a>

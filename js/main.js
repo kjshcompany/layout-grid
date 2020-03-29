@@ -37,7 +37,7 @@ $(document).ready(function() {
 			setCookie("lang", "", -365);
 			localStorage.removeItem("lang");
 			$("html").attr("lang", lang);
-			$(".switch-lang").hide();
+			$("body").addClass("lang-none");
 		}
 	} else {
 		if (lang === "es") {
