@@ -16,11 +16,16 @@
 		Config::set('default_lang', (Session::get('lang') ?? Cookie::get('lang') ?? 'en'));
 	}
 
-	Lang::load(Config::get('default_lang'));
-
+	
 ?>
 <!DOCTYPE html>
 <html lang="<?= Config::get('default_lang') ?>">
+<script> var variableJs = '<?= Config::get("default_lang") ?> 
+<?php
+$PHPvariable = “<script> document.write(variableJS) </script>”;
+echo “PHPvariable = “.$PHPvariable;
+Lang::load(Config::get('default_lang'));
+?>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -78,13 +83,6 @@
 		</nav>
 		<main class="main">
 			<span>Main</span>
-<br>
-<div class="aa"></div>
-<script>
-var aa = $('html').attr('lang');
- $('.aa').text(aa);
- </script>
-
 			</main>
 		<footer id="lang" class="footer"><?= Lang::get('footer', 'version', 'Version') ?></footer>
 	</body>

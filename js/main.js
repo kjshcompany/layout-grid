@@ -30,14 +30,24 @@ $(document).ready(function() {
 
 	$(".switch-lang").on("click", function(e) {
 		e.preventDefault();
-		console.log("default lang: ", default_lang);
+		// console.log("default lang: ", default_lang);
+		// setCookie("lang", $("#select_lang").val(), 365);
+		// $("#select_lang").attr("value", default_lang);
+		// default_lang = getCookie("lang");
+		// console.log("modify lang: ", default_lang);
+
 		setCookie("lang", $("#select_lang").val(), 365);
-		$("#select_lang").attr("value", default_lang);
-		default_lang = getCookie("lang");
-		console.log("modify lang: ", default_lang);
-		$("html").attr("lang", default_lang);
-		let modify_lang = default_lang;
+
 		//$("html").attr("lang", default_lang);
+		if ($(".switch-lang").hasClass("active")) {
+			localStorage.setItem("lang-mode", "true");
+			$(".switch-lang").removeClass("active");
+		} else {
+			$(".switch-lang").addClass("active");
+			localStorage.setItem("lang-mode", "false");
+		}
+		$("body").load("./");
+		$("html").attr("lang", getCookie("lang"));
 		//if (getCookie("lang") === "") {
 		//} else if (getCookie("lang") === "es") {
 		// 	setCookie("lang", $("#select_lang").val(), 365);
