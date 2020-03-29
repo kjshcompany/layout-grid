@@ -46,7 +46,17 @@ $(document).ready(function() {
 			$(".switch-lang").addClass("active");
 			localStorage.setItem("lang-mode", "false");
 		}
-		$("body").load("./");
+		//$("body").load("./");
+		$("body")
+			.one("load", function() {
+				// do stuff
+			})
+			.each(function() {
+				if (this.complete) {
+					$(this).load(); // For jQuery < 3.0
+					// $(this).trigger('load'); // For jQuery >= 3.0
+				}
+			});
 		$("html").attr("lang", getCookie("lang"));
 		//if (getCookie("lang") === "") {
 		//} else if (getCookie("lang") === "es") {
