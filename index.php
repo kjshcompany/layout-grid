@@ -15,7 +15,7 @@
 	} else {
 		Config::set('default_lang', (Session::get('lang') ?? Cookie::get('lang') ?? 'en'));
 	}
-
+	Config::set('default_lang', "es");
 	Lang::load(Config::get('default_lang'));
 
 ?>

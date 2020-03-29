@@ -22,10 +22,20 @@ $(document).ready(function() {
 		return "";
 	}
 
-	if (localStorage.getItem("lang-mode") === "true") {
-		$(".switch-lang").removeClass("active");
+	if (!localStorage.getItem("lang")) {
+		if ($("html").attr("lang") === "es") {
+			localStorage.setItem("lang", "es");
+			$(".switch-lang").removeClass("active");
+		} else {
+			localStorage.setItem("lang", "en");
+			$(".switch-lang").addClass("active");
+		}
 	} else {
-		$(".switch-lang").addClass("active");
+		if (localStorage.getItem("lang") === $("html").attr("lang")) {
+			$(".switch-lang").addClass("active");
+		} else {
+			$(".switch-lang").removeClass("active");
+		}
 	}
 
 	$(".switch-lang").on("click", function(e) {
@@ -35,15 +45,15 @@ $(document).ready(function() {
 		$("html").attr("lang", getCookie("lang"));
 
 		if ($(".switch-lang").hasClass("active")) {
-			localStorage.setItem("lang-mode", "true");
+			localStorage.setItem("switch-lang", "true");
 			$(".switch-lang").removeClass("active");
 		} else {
 			$(".switch-lang").addClass("active");
-			localStorage.setItem("lang-mode", "false");
+			localStorage.setItem("switch-lang", "false");
 		}
 
-		$("body").load("./", function() {
-			console.clear();
-		});
+		// $("body").load("./", function() {
+		// 	console.clear();
+		// });
 	});
 });
