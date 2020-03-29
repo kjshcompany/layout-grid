@@ -22,38 +22,36 @@ $(document).ready(function() {
 		return "";
 	}
 
-	if (!localStorage.getItem("lang")) {
-		if ($("html").attr("lang") === "es") {
-			localStorage.setItem("lang", "es");
-			$(".switch-lang").removeClass("active");
-		} else {
-			localStorage.setItem("lang", "en");
-			$(".switch-lang").addClass("active");
-		}
+	let lang = $("html").attr("lang");
+	if (lang === "es") {
+		localStorage.setItem("lang", false);
+		$("html").attr("lang", lang);
+		$(".switch-lang").removeClass("active");
 	} else {
-		if (localStorage.getItem("lang") === $("html").attr("lang")) {
-			$(".switch-lang").addClass("active");
-		} else {
-			$(".switch-lang").removeClass("active");
-		}
+		localStorage.setItem("lang", true);
+		$("html").attr("lang", lang);
+		$(".switch-lang").addClass("active");
 	}
 
 	$(".switch-lang").on("click", function(e) {
 		e.preventDefault();
-
 		setCookie("lang", $(".switch-lang").attr("name"), 365);
-		$("html").attr("lang", getCookie("lang"));
-
-		if ($(".switch-lang").hasClass("active")) {
-			localStorage.setItem("switch-lang", "true");
-			$(".switch-lang").removeClass("active");
-		} else {
+		if (lang === "es") {
+			localStorage.setItem("lang", true);
+			$("html").attr("lang", "en");
 			$(".switch-lang").addClass("active");
-			localStorage.setItem("switch-lang", "false");
+		} else {
+			localStorage.setItem("lang", false);
+			$("html").attr("lang", "es");
+			$(".switch-lang").removeClass("active");
 		}
 
-		// $("body").load("./", function() {
-		// 	console.clear();
-		// });
+		// setCookie("lang", $(".switch-lang").attr("name"), 365);
+		// $("html").attr("lang", getCookie("lang"));
+		// $("html").attr("lang", getCookie("lang"));
+
+		$("body").load("./", function() {
+			console.clear();
+		});
 	});
 });
